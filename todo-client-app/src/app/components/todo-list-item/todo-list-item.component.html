@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutGap="15px" class="list-item">
+    <div [ngClass]="{'done': model.done}" fxLayout="row" fxLayoutGap="15px">
+        <mat-icon *ngIf="model.done">done</mat-icon>
+        <div fxLayout="column" class="word-wrap">
+            <strong>{{model.title}}</strong>
+            <div>{{model.description}}</div>
+        </div>
+        <div fxLayoutGap="15px">
+            <button mat-mini-fab (click)="markAsDone()" *ngIf="!model.done">
+                <mat-icon>done</mat-icon>
+            </button>
+            <button mat-mini-fab (click)="remove()">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>

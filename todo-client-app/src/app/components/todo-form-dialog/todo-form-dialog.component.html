@@ -1,0 +1,18 @@
+<div>
+    <form #queryForm="ngForm" fxLayout="column" fxLayoutGap="10px">
+        <mat-form-field class="title">
+            <input matInput required placeholder="title" [disabled]="saving" [(ngModel)]="model.title" name="title" minlength="1"
+                maxlength="250">
+        </mat-form-field>
+
+        <mat-form-field class="description">
+            <textarea matInput placeholder="description" [disabled]="saving" [(ngModel)]="model.description" name="description" minlength="1"
+                maxlength="1000"></textarea>
+        </mat-form-field>
+    </form>
+    <div fxLayoutAlign="end" fxLayoutGap="10px">
+        <button mat-raised-button (click)="cancel()">cancel</button>
+        <button mat-raised-button (click)="save()" [disabled]="saving || queryForm.invalid" color="primary">save</button>
+    </div>
+</div>
+<mat-progress-bar *ngIf="saving" mode="indeterminate"></mat-progress-bar>

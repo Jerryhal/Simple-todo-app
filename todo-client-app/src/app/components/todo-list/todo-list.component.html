@@ -1,0 +1,16 @@
+<div *ngIf="todoItems$ | async as todoItems; else loading">
+    <div *ngFor="let todoItem of todoItems | slice:0:(expanded ? todoItems.length : maxListLength)">
+        <app-todo-list-item [model]="todoItem"></app-todo-list-item>
+    </div>
+    <div fxLayoutAlign="center" *ngIf="todoItems.length > maxListLength">
+        <button mat-button (click)="expanded = !expanded" class="expand-button">
+            <mat-icon *ngIf="expanded; else expand">expand_less</mat-icon>
+            <ng-template #expand>
+                <mat-icon>expand_more</mat-icon>
+            </ng-template>
+        </button>
+    </div>
+</div>
+<ng-template #loading>
+    <mat-spinner></mat-spinner>
+</ng-template>

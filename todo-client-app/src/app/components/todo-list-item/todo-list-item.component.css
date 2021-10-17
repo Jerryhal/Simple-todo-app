@@ -1,0 +1,12 @@
+.done {
+    color: lightgreen; 
+};
+
+.list-item {
+    margin-bottom: 15px;
+}
+
+.word-wrap {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
