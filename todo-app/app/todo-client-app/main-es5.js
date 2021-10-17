@@ -1798,7 +1798,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ResourceService);
 
         this.http = http;
-        this.baseUrl = "http://localhost:3000";
+        this.baseUrl = "http://185.247.117.142:3000";
         this.route = "todo";
       }
 

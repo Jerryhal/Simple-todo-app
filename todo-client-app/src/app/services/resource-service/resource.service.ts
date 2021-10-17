@@ -11,7 +11,7 @@ export class ResourceService {
   private route: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = "http://localhost:3000";
+    this.baseUrl = "http://185.247.117.142:3000";
     this.route = "todo";
   }
 

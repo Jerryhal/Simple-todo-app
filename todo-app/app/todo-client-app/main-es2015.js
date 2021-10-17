@@ -925,7 +925,7 @@ __webpack_require__.r(__webpack_exports__);
 let ResourceService = class ResourceService {
     constructor(http) {
         this.http = http;
-        this.baseUrl = "http://localhost:3000";
+        this.baseUrl = "http://185.247.117.142:3000";
         this.route = "todo";
     }
     getTodoItems(userId) {
